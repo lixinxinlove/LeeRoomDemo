@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 
-
         initView();
 
 
@@ -46,10 +45,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSave.setOnClickListener(this);
         btnSelect.setOnClickListener(this);
     }
-
-
-
-
 
 
     @Override
@@ -99,4 +94,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }).start();
     }
+
+
+    public void onQuery(View view) {
+
+    }
+
 }
