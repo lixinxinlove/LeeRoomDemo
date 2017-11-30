@@ -32,7 +32,7 @@ public class DiskLruCacheActivity extends AppCompatActivity {
 
 
         JNIS jnis=new JNIS();
-        textView.setText(jnis.stringFromJNI());
+        textView.setText(jnis.stringLee("lee"));
 
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {

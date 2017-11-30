@@ -7,9 +7,11 @@ package com.lixinxin.leeroomdemo.jni;
 public class JNIS {
 
     static {
-        System.loadLibrary("native-lib");
+        System.loadLibrary("Hello");
     }
 
     public native String stringFromJNI();
+
+    public native String stringLee(String string);
 
 }
