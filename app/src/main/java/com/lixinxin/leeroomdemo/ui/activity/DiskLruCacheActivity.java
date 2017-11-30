@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.lixinxin.leeroomdemo.R;
 import com.lixinxin.leeroomdemo.cache.DiskLruCacheHelper;
+import com.lixinxin.leeroomdemo.jni.JNIS;
 
 import java.io.IOException;
 
@@ -28,6 +29,10 @@ public class DiskLruCacheActivity extends AppCompatActivity {
         setContentView(R.layout.activity_disk_lru_cache);
 
         textView=findViewById(R.id.tv);
+
+
+        JNIS jnis=new JNIS();
+        textView.setText(jnis.stringFromJNI());
 
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
