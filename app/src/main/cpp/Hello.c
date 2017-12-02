@@ -1,23 +1,24 @@
+//
+// Created by lixinxin on 2017/12/2.
+//
+
 #include <jni.h>
+#include <string.h>
 
 JNIEXPORT jstring JNICALL
 Java_com_lixinxin_leeroomdemo_jni_JNIS_stringFromJNI(JNIEnv *env, jobject instance) {
 
-
-    char *returnValue = "leee";
+   char *returnValue="Hello";
 
     return (*env)->NewStringUTF(env, returnValue);
 }
 
+
 JNIEXPORT jstring JNICALL
 Java_com_lixinxin_leeroomdemo_jni_JNIS_stringLee(JNIEnv *env, jobject instance, jstring string_) {
-    const char *string = (*env)->GetStringUTFChars(env, string_, 0);
+     char *string = (*env)->GetStringUTFChars(env, string_, 0);
 
-    // TODO
-
-    (*env)->ReleaseStringUTFChars(env, string_, string);
-
-    char *returnValue = "leee";
+    char * returnValue=strcat(string,"jni string");
 
     return (*env)->NewStringUTF(env, returnValue);
 }

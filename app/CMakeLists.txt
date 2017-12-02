@@ -9,7 +9,7 @@ add_library( # Sets the name of the library.
              # Sets the library as a shared library.
              SHARED
 
-             src/main/jni/Hello.c )
+             src/main/cpp/Hello.c )
 
 
 
