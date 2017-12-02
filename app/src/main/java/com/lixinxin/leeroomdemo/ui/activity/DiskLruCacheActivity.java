@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.lixinxin.leeroomdemo.R;
 import com.lixinxin.leeroomdemo.cache.DiskLruCacheHelper;
+import com.lixinxin.leeroomdemo.jni.CCallJava;
 import com.lixinxin.leeroomdemo.jni.JNIS;
 
 import java.io.IOException;
@@ -30,9 +31,11 @@ public class DiskLruCacheActivity extends AppCompatActivity {
 
         textView=findViewById(R.id.tv);
 
-
         JNIS jnis=new JNIS();
-        textView.setText(jnis.stringLee("lee"));
+
+        CCallJava cCallJava=new CCallJava();
+
+        textView.setText(cCallJava.callJavaStatic()+"结果");
 
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -45,7 +48,6 @@ public class DiskLruCacheActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-
     }
 
 

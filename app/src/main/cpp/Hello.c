@@ -22,3 +22,4 @@ Java_com_lixinxin_leeroomdemo_jni_JNIS_stringLee(JNIEnv *env, jobject instance, 
 
     return (*env)->NewStringUTF(env, returnValue);
 }
+

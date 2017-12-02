@@ -12,14 +12,26 @@ add_library( # Sets the name of the library.
              src/main/cpp/Hello.c )
 
 
+add_library( # Sets the name of the library.
+             CCallJava
 
-find_library( # Sets the name of the path variable.
-              log-lib
+             # Sets the library as a shared library.
+             SHARED
 
-              log )
+             src/main/cpp/CCallJava.c )
 
 
 target_link_libraries( # Specifies the target library.
                        Hello
 
                        ${log-lib} )
+
+target_link_libraries( # Specifies the target library.
+                       CCallJava
+
+                       ${log-lib} )
+
+find_library( # Sets the name of the path variable.
+              log-lib
+
+              log )

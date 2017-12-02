@@ -8,6 +8,7 @@ public class JNIS {
 
     static {
         System.loadLibrary("Hello");
+        System.loadLibrary("CCallJava");
     }
 
     public native String stringFromJNI();
