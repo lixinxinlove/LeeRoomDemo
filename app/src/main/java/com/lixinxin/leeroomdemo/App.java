@@ -18,6 +18,6 @@ public class App extends Application {
         super.onCreate();
 
         /*.addMigrations(MIGRATION_1_2,MIGRATION_2_3)*/
-        db = Room.databaseBuilder(getApplicationContext(), AppDataBase.class, "database-name").build();
+        db = Room.databaseBuilder(getApplicationContext(), AppDataBase.class, "database-name").fallbackToDestructiveMigration().build();
     }
 }
